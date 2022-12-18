@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="form">
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>Amount</mat-label>
+    <input matInput type="number" class="amount-right-align" placeholder="0" formControlName="amount">
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+</form>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="row">
+    <button mat-raised-button (click)="back()">Back</button>
+    <button mat-raised-button color="primary" (click)="next()">Next</button>
+  </div>
+</section>
