@@ -1,0 +1,16 @@
+<h1>Confirm?</h1>
+
+<form class="form" [formGroup]="form">
+  <mat-label>Agency: {{ this.form.get('agency')?.value }}</mat-label>
+  <mat-label>Account: {{ this.form.get('account')?.value }}</mat-label>
+  <mat-label>Amount: {{ this.form.get('amount')?.value }}</mat-label>
+</form>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="row">
+    <button mat-raised-button (click)="back()">Back</button>
+    <button mat-raised-button color="primary" (click)="confirm()">Confirm</button>
+  </div>
+</section>
