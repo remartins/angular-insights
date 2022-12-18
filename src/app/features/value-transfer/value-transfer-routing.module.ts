@@ -11,8 +11,16 @@ const routes: Routes = [
     path: 'value-transfer',
     component: ValueTransferComponent,
     children: [
-      { path: 'agency-account', component: AgencyAccountComponent },
-      { path: 'choice-value', component: ChoiceValueComponent },
+      {
+        path: 'agency-account',
+        component: AgencyAccountComponent,
+        data: { label: 'Agency Account' },
+      },
+      {
+        path: 'choice-value',
+        component: ChoiceValueComponent,
+        data: { label: 'Choice Value' },
+      },
       { path: 'confirm-transfer', component: ConfirmTransferComponent },
       { path: 'transfer-completed', component: TransferCompletedComponent },
     ],

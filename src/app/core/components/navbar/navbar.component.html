@@ -1,5 +1,8 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a class="breadcrumb">First</a>
+    <span *ngFor="let step of steps">
+      <span *ngIf="step.index !== 0">&nbsp; > &nbsp;</span>
+      <a class="breadcrumb">{{ step.label }}</a>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>
